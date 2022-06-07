@@ -28,18 +28,31 @@ body{
   outline: none;
 }
 .click-button:hover {
-  background-color: #ffef0fe9;
-  box-shadow: 0px 15px 20px rgba(235, 218, 65, 0.4);
+  background-color: rgb(255, 170, 0);
+  box-shadow: 0px 15px 20px rgba(243, 173, 22, 0.4);
   color: #fff;
   transform: translateY(-7px);
 }
-span{
-  color:#fff;
-  margin: 25px;
-  font-size: 3rem;
-}
 p{
   color: yellow;
+}
+span{
+  color: #fff;
+  display: inline-block;
+  border-radius: 40px;
+  width: 60px;
+  line-height: 60px;
+  font-size: 35px;
+  margin-right: 20px;
+  position: relative;
+  left: 10px;
+}
+.lotto-num{
+  background-color:rgb(50 140 35);
+}
+
+.bonus-num{
+  background-color: rgb(255 212 0);
 }
 
 .Main-lotto{
@@ -48,5 +61,4 @@ p{
   margin: 25px;
   text-shadow: -1px -1px 0 rgb(223, 210, 223), 1px -1px 0 rgb(213, 206, 213), -1px 1px 0 rgb(195, 189, 195), 1px 1px 0 rgb(225, 218, 225);
 }
-
 

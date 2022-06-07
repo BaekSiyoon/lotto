@@ -81,7 +81,7 @@ function LottoPage() {
       </button>
       {again && (
         <button onClick={onClickAgain} className="click-button">
-          한번 더 !
+          한 번 더 !
         </button>
       )}
     </>
