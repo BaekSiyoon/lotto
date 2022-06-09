@@ -40,8 +40,33 @@ function LottoPage() {
     setTimeout(() => setBonus(bonus), 7000);
     setTimeout(() => setAgain(true), 7000);
 
+    for (let i = 1, j = 0; j <= lotto.length; ++i, ++j) {
+      console.log('j' + j);
+      console.log('i' + i);
+      if (1 <= lotto[j] && lotto[j] <= 10) {
+        console.log('10보다 작음');
+        const redBall: any = document.getElementById(`ball-st${[i]}`);
+        redBall.style.backgroundColor = 'red';
+      } else if (11 <= lotto[j] && lotto[j] <= 20) {
+        console.log('20보다 작음');
+        const orangeBall: any = document.getElementById(`ball-st${[i]}`);
+        orangeBall.style.backgroundColor = 'orange';
+      } else if (21 <= lotto[j] && lotto[j] <= 30) {
+        console.log('30보다 작음');
+        const yellowBall: any = document.getElementById(`ball-st${[i]}`);
+        yellowBall.style.backgroundColor = 'yellow';
+      } else if (31 <= lotto[j] && lotto[j] <= 40) {
+        console.log('40보다 작음');
+        const blueBall: any = document.getElementById(`ball-st${[i]}`);
+        blueBall.style.backgroundColor = 'blue';
+      } else if (lotto[j] > 41) {
+        console.log('40보다 많음');
+        const greenBall: any = document.getElementById(`ball-st${[i]}`);
+        greenBall.style.backgroundColor = 'green';
+      }
+    }
     console.log('bonus:', bonus);
-    console.log('setLotto: ', lotto);
+    console.log('lotto: ', lotto);
   }
   const onClickAgain = () => {
     console.log('onClickReset');
@@ -66,12 +91,24 @@ function LottoPage() {
   return (
     <>
       <p className="Main-lotto">lotto</p>
-      <span className="lotto-num"> {lottoNum1} </span>
-      <span className="lotto-num"> {lottoNum2} </span>
-      <span className="lotto-num"> {lottoNum3} </span>
-      <span className="lotto-num"> {lottoNum4} </span>
-      <span className="lotto-num"> {lottoNum5} </span>
-      <span className="lotto-num"> {lottoNum6} </span>
+      <span className="lotto-num" id="ball-st1">
+        {lottoNum1}
+      </span>
+      <span className="lotto-num" id="ball-st2">
+        {lottoNum2}
+      </span>
+      <span className="lotto-num" id="ball-st3">
+        {lottoNum3}
+      </span>
+      <span className="lotto-num" id="ball-st4">
+        {lottoNum4}
+      </span>
+      <span className="lotto-num" id="ball-st5">
+        {lottoNum5}
+      </span>
+      <span className="lotto-num" id="ball-st6">
+        {lottoNum6}
+      </span>
       <br />
       <p>{html}</p>
       <span className="bonus-num"> {bonus} </span>
