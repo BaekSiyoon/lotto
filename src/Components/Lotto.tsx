@@ -44,25 +44,20 @@ function LottoPage() {
       console.log('j' + j);
       console.log('i' + i);
       if (1 <= lotto[j] && lotto[j] <= 10) {
-        console.log('10보다 작음');
-        const redBall: any = document.getElementById(`ball-st${[i]}`);
-        redBall.style.backgroundColor = 'red';
+        const pinkBall: any = document.getElementById(`ball-st${[i]}`);
+        pinkBall.style.backgroundColor = '#ff9292';
       } else if (11 <= lotto[j] && lotto[j] <= 20) {
-        console.log('20보다 작음');
-        const orangeBall: any = document.getElementById(`ball-st${[i]}`);
-        orangeBall.style.backgroundColor = 'orange';
-      } else if (21 <= lotto[j] && lotto[j] <= 30) {
-        console.log('30보다 작음');
         const yellowBall: any = document.getElementById(`ball-st${[i]}`);
-        yellowBall.style.backgroundColor = 'yellow';
+        yellowBall.style.backgroundColor = '#ffc107';
+      } else if (21 <= lotto[j] && lotto[j] <= 30) {
+        const purpleBall: any = document.getElementById(`ball-st${[i]}`);
+        purpleBall.style.backgroundColor = '#753188';
       } else if (31 <= lotto[j] && lotto[j] <= 40) {
-        console.log('40보다 작음');
         const blueBall: any = document.getElementById(`ball-st${[i]}`);
-        blueBall.style.backgroundColor = 'blue';
+        blueBall.style.backgroundColor = '#344cb7';
       } else if (lotto[j] > 41) {
-        console.log('40보다 많음');
         const greenBall: any = document.getElementById(`ball-st${[i]}`);
-        greenBall.style.backgroundColor = 'green';
+        greenBall.style.backgroundColor = '#116530';
       }
     }
     console.log('bonus:', bonus);
@@ -76,7 +71,6 @@ function LottoPage() {
     setLottoNum4([]);
     setLottoNum5([]);
     setLottoNum6([]);
-
     setBonus(null);
     setAgain(false);
     MakeLotto();
